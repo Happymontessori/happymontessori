@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trường Mầm Non Happy Montessori - môi trường giáo dục mầm non chất lượng cao, an toàn và thân thiện tại Hải Dương." />
+  <title>Trường Mầm Non Happy Montessori</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://scontent-hkg1-1.xx.fbcdn.net/v/t1.15752-9/494826486_9872912239428501_5114376358970456364_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=pTJ3PvYjeeoQ7kNvwF-voH9&_nc_oc=Adky_2B_lCJQdmlbBn-dH5p5GicMDuwJOWbdFpdxoHWPk6bKssbR8DOBFXxS5m09wX9op_W32xPv-OUjITRriMGO&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-hkg1-1.xx&oh=03_Q7cD2QHTwlsv9p3406hm8u3mox1W2WbJn4wRmldjU21u1Wvjzw&oe=6863967D') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      transition: background 0.3s ease, color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background: #ff6f61;
+      color: white;
+    }
+
+    .banner {
+      position: relative;
+      height: 220px;
+      background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      filter: brightness(0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      padding: 0 20px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #ff6f61;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: #ff6f61;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    p, ul {
+      max-width: 900px;
+      margin: 0 auto 15px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #444;
+    }
+
+    .hoc-phi-images, .hoat-dong-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .hoc-phi-images img, .hoat-dong-images img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .hoc-phi-images img:hover, .hoat-dong-images img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        height: 180px;
+        font-size: 1.4rem;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner {
+        height: 160px;
+        font-size: 1.2rem;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      .hoc-phi-images img, .hoat-dong-images img {
+        max-width: 100%;
+      }
+
+      main {
+        margin: 10px;
+        padding: 10px;
+      }
+    }
+
+    .hidden-gallery {
+      display: none; /* Ẩn mặc định */
+      margin-top: 15px;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      display: flex;
+    }
+
+    .hidden-gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .hidden-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox nền tối */
+    .lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none; /* ẩn mặc định */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Ảnh phóng to */
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #fff;
+      cursor: zoom-out;
+      transition: transform 0.3s ease;
+    }
+
+    /* Khi hover ảnh phóng to */
+    .lightbox-overlay img:hover {
+      transform: scale(1.05);
+    }
+/* === GALLERY STYLE === */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+.album-cover {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.album-cover img {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.album-cover img:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #555;
+}
+
+.lightbox-album {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.92);
+  z-index: 2000;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.album-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.album-images img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #fff;
+  transition: transform 0.3s ease;
+}
+
+.album-images img:hover {
+  transform: scale(1.05);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2100;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t39.30808-6/484360587_545061168632191_8859867928005595647_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Bda4BvUNizMQ7kNvwGZ8ajT&_nc_oc=Adkmn5wgrVzC_Va5gXktpy3fKXlfpmJbRJXs_kDcz8DlLBCLNlo4gmrm4TQoRGgVsZA8PuFbRsofhCTo66nnPOMr&_nc_zt=23&_nc_ht=scontent-hkg4-2.xx&_nc_gid=zjBQ13fDAj7FKtIXcZ8uPA&oh=00_AfK_cIkTMkANfmHC3U1G59b0VUyBYuwlKaHJVVY36CsuTw&oe=6841FE06" alt="Logo Trường Mầm Non Happy Montessori" />
+  </header>
+
+  <nav>
+    <a href="#trangchu">Trang chủ</a>
+    <a href="#tuyensinh">Tuyển sinh</a>
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#hoatdong">Hoạt động</a>
+    <a href="#hoctap">Học tập</a>
+    <a href="#lienhe">Liên hệ</a>
+  </nav>
+
+  <div class="banner">
+    Chào mừng đến với Happy Montessori
+  </div>
+
+  <main>
+    <section id="trangchu">
+      <h2>Trang chủ</h2>
+      <p>Chào mừng quý phụ huynh và các bé đến với Trường Mầm Non Happy Montessori – ngôi trường yêu thương và phát triển toàn diện cho trẻ. Hãy cùng chúng tôi khám phá một môi trường học tập an toàn, thân thiện và tràn đầy niềm vui nhé!</p>
+    </section>
+
+    <section id="tuyensinh">
+      <h2>Tuyển sinh</h2>
+      <h3>🔹 Đối tượng tuyển sinh:</h3>
+      <p>Trẻ từ 15 tháng tuổi đến 6 tuổi.</p>
+      <h3>🔹 Chương trình học:</h3>
+      <ul>
+        <li>Chương trình giáo dục chuẩn Montessori.</li>
+        <li>Chương trình tiếng Anh vời 100% giao viên nước ngoài.</li>
+        <li>Chương trình phát triển kỹ năng mềm, năng khiếu, thể chất, nghệ thuật.</li>
+      </ul>
+      <h3>🔹 Thời gian nhận hồ sơ:</h3>
+      <p>Từ ngày 01/06/2025 đến khi đủ chỉ tiêu.</p>
+      <h3>🔹 Hồ sơ đăng ký gồm:</h3>
+      <ul>
+        <li>Đơn xin nhập học (theo mẫu của trường).</li>
+        <li>Bản sao giấy khai sinh.</li>
+      </ul>
+      <h3>🔹 Thông tin liên hệ:</h3>
+      <p>
+        📞 Hotline: 0349.597.214 / 0775.335.446<br />
+        📧 Email: happymontessori.hd@gmail.com<br />
+        🌐 Facebook: Happy Montessori Preschool HD
+      </p>
+      <h3>🔹 Bảng học phí và các khoản phải nộp:</h3>
+      <div class="gallery">
+  <img src="https://scontent-sin11-1.xx.fbcdn.net/v/t1.15752-9/491219650_739076528843907_7079059690512611989_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ukTXJtCgkuQQ7kNvwEussrI&_nc_oc=AdlTYB4Xz9THO0yc1KTkWkpM95-otDxE6mZ4H67FL1zQDnCqgKzIvBUoYN9I4ESBtZK3GsBNl6cFcGPoNgvVV0F9&_nc_zt=23&_nc_ht=scontent-sin11-1.xx&oh=03_Q7cD2QGp_bvcwCPRfrvIDgfsaaet9zB19UqVHSjRE9_2unazfA&oe=6863992F" alt="Bảng học phí và các khoản phải nộp - K5" />
+  <img src="https://scontent-sin2-3.xx.fbcdn.net/v/t1.15752-9/491218550_1395576714899118_2432944266952555517_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UMLLMuruVPYQ7kNvwFcNqX8&_nc_oc=AdkIoDBcgDNhuviJlYgamHIKz9MrpNtugiXSwquZgtGVPpSwiHLwgd3oSP2ug2lSUAh3yoYGYYXEpuEPCJR7cCvs&_nc_zt=23&_nc_ht=scontent-sin2-3.xx&oh=03_Q7cD2QEQcrSDqzNoTkg0CLV6gafP0mrp_QlllO3LdMD_rwyWvQ&oe=686371EF" alt="Bảng học phí và các khoản phải nộp - K10" />
+  <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.15752-9/495072531_2196717630768826_680516582295740239_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=XNI5RPbUigwQ7kNvwFqChFp&_nc_oc=AdnDuMLHDyGSmbJNABPvFHi9yOn1lFKNOyReyxCb9S4_LDKfzRMMRWGhbqTU6svYO5boBaus1Zu_hloWNwXNDub6&_nc_zt=23&_nc_ht=scontent-sin6-2.xx&oh=03_Q7cD2QEsPy-gQHhissthJdrka9TZaTCtCLq7wrzKuKaGgzm7gQ&oe=6863656A" alt="Bảng học phí và các khoản phải nộp - K20" />
+</div>
+    </section>
+
+    <section id="gioithieu">
+      <h2>Giới thiệu</h2>
+      <p>Trường Mầm Non Happy Montessori được thành lập với sứ mệnh xây dựng một môi trường giáo dục hiện đại, an toàn và thân thiện, giúp trẻ phát triển toàn diện về thể chất, trí tuệ và tinh thần.</p>
+      <p>Phương pháp Montessori là một hệ thống giáo dục lấy trẻ làm trung tâm, được phát triển bởi Maria Montessori. Phương pháp này nhấn mạnh tính tự lập, tự do (trong khuôn khổ cho phép) và trải nghiệm thực hành để trẻ phát triển toàn diện về thể chất, trí tuệ, xã hội và cảm xúc. </p>
+      <p> Môi trường học tập hiện đại và thân thiện, nơi trẻ được phát triển toàn diện với sự đồng hành của đội ngũ giáo viên Việt Nam tận tâm và giáo viên nước ngoài giàu kinh nghiệm, giúp các bé làm quen với tiếng Anh một cách tự nhiên ngay từ những năm đầu đời  </p>
+</section>
+
+    <section id="hoatdong">
+  <h2>Hoạt động của trẻ</h2>
+  <p>Chúng tôi tổ chức nhiều hoạt động phong phú nhằm phát triển các kỹ năng và thể chất cho trẻ như:</p>
+  <ul>
+    <li>Hoạt động Montessori theo phương pháp quốc tế.</li>
+    <li>Hoạt động thể chất, vui chơi ngoài trời.</li>
+    <li>Hoạt động sáng tạo và nghệ thuật.</li>
+  </ul>
+
+  <!-- Ảnh đại diện (ấn vào sẽ mở album) -->
+  <div class="album-cover" onclick="openAlbum('album-hoatdong')">
+    <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/500168558_602957516175889_8202352145551387339_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=YMvWVGuQCfkQ7kNvwEdN7ld&_nc_oc=Adnu6qXMI3bBr1p_Ak40mOdg8cegZFrU_z-UoO8g8Ts8wO2lXLqHYv9SAsQOv2xTIIGUcme1qEvAhwW7rYN5X_at&_nc_zt=23&_nc_ht=scontent-hkg4-1.xx&_nc_gid=b523ow_Uj1ACaNnUXudc3A&oh=00_AfLhxV3Rp4d0RFDbhRFoi_Q9InN891RRjLnHs364Xf58yg&oe=68421FFE" alt="Hoạt động" alt="Xem album hoạt động">
+    <p class="caption"><em>Ấn vào để xem album hoạt động của trẻ</em></p>
+  </div>
+
+  <!-- Album ẩn, mở khi click -->
+  <div class="lightbox-album" id="album-hoatdong">
+    <span class="close-btn" onclick="closeAlbum('album-hoatdong')">&times;</span>
+    <div class="album-images">
+      <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/500168558_602957516175889_8202352145551387339_n.jpg" alt="Hoạt động 1">
+      <img src="https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/499454904_600704993067808_8066541698867653393_n.jpg" alt="Hoạt động 2">
+      <img src="https://raw.githubusercontent.com/Happymontessori/anh/refs/heads/main/anh/474657612_511024422035866_1876409621798356261_n.jpg" alt="Hoạt động 3">
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/475653457_514018158403159_1550960083578564241_n.jpg?raw=true" alt="Hoạt động 4">
+    </div>
+  </div>
+
+  <p><em>...và rất nhiều hoạt động thú vị khác đang chờ các bé khám phá!</em></p>
+ <section id="hoatdong">
+  <h2>Góc học tập</h2>
+  <p>Chúng tôi sử dụng pháp pháp Montessori những điểm chính:</p>
+  <ul>
+    <li>Tự do và tự học.</li>
+    <li>Môi trường học tập được chuẩn bị kỹ lưỡng.</li>
+    <li>Tôn trọng sự khác biệt cá nhân.</li>
+    <li>Nhấn mạnh trải nghiệm thực tế.</li>
+    <li>Phát triển các giác quan,Giáo dục toàn diện.</li>
+    <li>Học tiếng anh với 100% giáo viên nước ngoài.</li>
+  </ul>
+
+  <!-- Ảnh đại diện (ấn vào sẽ mở album) -->
+  <div class="album-cover" onclick="openAlbum('album-hoatdong')">
+    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" alt="Học tập" 
+    <p class="caption"><em>Ấn vào để xem album hoạt động của trẻ</em></p>
+  </div>
+
+  <!-- Album ẩn, mở khi click -->
+  <div class="lightbox-album" id="album-hoatdong">
+    <span class="close-btn" onclick="closeAlbum('album-hoatdong')">&times;</span>
+    <div class="album-images">
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769210872_879112d89588ae441c768911caf7897c.jpg?raw=true" alt="Lớp học Montessori" alt="Lớp học sáng tạ" />
+    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769222649_fbb5dabcc825fef900fc4da54f33d58e.jpg?raw=true" alt="Thực hành giáo cụ" />
+    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769210872_879112d89588ae441c768911caf7897c.jpg?raw=true" />
+  </div>
+  </div>
+  <!-- Ảnh đại diện (ấn vào sẽ mở album) -->
+  <div class="album-cover" onclick="openAlbum('album-hoatdong')">
+    <img src="https://github.com/Happymontessori/anh/blob/main/anh/479733922_524277510710557_5253216959091805140_n.jpg?raw=true" alt="Học tập" 
+    <p class="caption"><em>Ấn vào để xem album hoạt động của trẻ</em></p>
+  </div>
+
+  <!-- Album ẩn, mở khi click -->
+  <div class="lightbox-album" id="album-hoatdong">
+    <span class="close-btn" onclick="closeAlbum('album-hoatdong')">&times;</span>
+    <div class="album-images">
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/479733922_524277510710557_5253216959091805140_n.jpg?raw=true" alt="Lớp học sáng tạ" />
+    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" alt="Thực hành giáo cụ" />
+    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" />
+  </div>
+  </div>
+  <p><em>...và rất nhiều phương pháp giáo dục tiên tiến!</em></p>
+</section>
+
+    <section id="lienhe">
+      <h2>Liên hệ</h2>
+      <p>Quý phụ huynh và các bé có thể liên hệ với chúng tôi qua các kênh sau:</p>
+      <ul>
+  <li>📞 Hotline: 0349.597.214 / 0775.335.446</li>
+  <li>📧 Email: happymontessori.hd@gmail.com</li>
+  <li>📍 CS1: Khu phố Sing, đường 20/9, TT Phú Thái, Kim Thành, Hải Dương (Gần quán cà phê Ngọc Việt, Hoàng Gia)</li>
+  <li>📍 CS2: Khu dân cư số 2, TT Thanh Hà, Thanh Hà, Hải Dương (Đối diện UBND thị trấn)</li>
+</ul>
+
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Trường Mầm Non Happy Montessori - All Rights Reserved
+  </footer>
+
+  <!-- Lightbox cho ảnh (nếu muốn có hiệu ứng phóng to ảnh khi click) -->
+  <div class="lightbox-overlay" id="lightbox">
+    <img src="" alt="Ảnh phóng to" />
+  </div>
+
+  <script>
+    // Script cho lightbox ảnh
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    document.getElementById('lightbox').addEventListener('click', () => {
+      document.getElementById('lightbox').style.display = 'none';
+    });
+  </script>
+<script>
+  function openAlbum(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function closeAlbum(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
