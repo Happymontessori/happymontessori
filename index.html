@@ -14,7 +14,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://scontent-hkg1-1.xx.fbcdn.net/v/t1.15752-9/494826486_9872912239428501_5114376358970456364_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=pTJ3PvYjeeoQ7kNvwF-voH9&_nc_oc=Adky_2B_lCJQdmlbBn-dH5p5GicMDuwJOWbdFpdxoHWPk6bKssbR8DOBFXxS5m09wX9op_W32xPv-OUjITRriMGO&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-hkg1-1.xx&oh=03_Q7cD2QHTwlsv9p3406hm8u3mox1W2WbJn4wRmldjU21u1Wvjzw&oe=6863967D') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       background-size: cover;
       color: #333;
       line-height: 1.6;
@@ -63,8 +63,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: white;
-      font-size: 2rem;
+      color: red;
+      font-size: 5rem;
       font-weight: bold;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
       padding: 0 20px;
@@ -224,7 +224,20 @@
     .lightbox-overlay img:hover {
       transform: scale(1.05);
     }
-/* === GALLERY STYLE === */
+/* === GALLERY STYLE === *//* Album học tập dạng lưới */
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.albums-container .album-cover {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -313,13 +326,13 @@
 
 <body>
   <header>
-    <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t39.30808-6/484360587_545061168632191_8859867928005595647_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Bda4BvUNizMQ7kNvwGZ8ajT&_nc_oc=Adkmn5wgrVzC_Va5gXktpy3fKXlfpmJbRJXs_kDcz8DlLBCLNlo4gmrm4TQoRGgVsZA8PuFbRsofhCTo66nnPOMr&_nc_zt=23&_nc_ht=scontent-hkg4-2.xx&_nc_gid=zjBQ13fDAj7FKtIXcZ8uPA&oh=00_AfK_cIkTMkANfmHC3U1G59b0VUyBYuwlKaHJVVY36CsuTw&oe=6841FE06" alt="Logo Trường Mầm Non Happy Montessori" />
+    <img src="https://scontent-hkg1-1.xx.fbcdn.net/v/t1.15752-9/495072922_1720233495276219_7059048538009970409_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=bFhBzawtjjwQ7kNvwECz8jD&_nc_oc=AdkQaN-nK-bI1yt8fkCiliPevrzyHYa0ZaKypw29smHIOE-zGYxBwSnGcRWRA2w6MC8ZXhsV3hMpOoSNtaYRrv4g&_nc_zt=23&_nc_ht=scontent-hkg1-1.xx&oh=03_Q7cD2gGdWWMUGjpEwI4AD-9_VskCG1E1_mD0BPP1c37tr6f3gA&oe=6867B5A7" alt="Logo Trường Mầm Non Happy Montessori" />
   </header>
 
   <nav>
     <a href="#trangchu">Trang chủ</a>
-    <a href="#tuyensinh">Tuyển sinh</a>
     <a href="#gioithieu">Giới thiệu</a>
+    <a href="#tuyensinh">Tuyển sinh</a>
     <a href="#hoatdong">Hoạt động</a>
     <a href="#hoctap">Học tập</a>
     <a href="#lienhe">Liên hệ</a>
@@ -353,11 +366,6 @@
         <li>Bản sao giấy khai sinh.</li>
       </ul>
       <h3>🔹 Thông tin liên hệ:</h3>
-      <p>
-        📞 Hotline: 0349.597.214 / 0775.335.446<br />
-        📧 Email: happymontessori.hd@gmail.com<br />
-        🌐 Facebook: Happy Montessori Preschool HD
-      </p>
       <h3>🔹 Bảng học phí và các khoản phải nộp:</h3>
       <div class="gallery">
   <img src="https://scontent-sin11-1.xx.fbcdn.net/v/t1.15752-9/491219650_739076528843907_7079059690512611989_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ukTXJtCgkuQQ7kNvwEussrI&_nc_oc=AdlTYB4Xz9THO0yc1KTkWkpM95-otDxE6mZ4H67FL1zQDnCqgKzIvBUoYN9I4ESBtZK3GsBNl6cFcGPoNgvVV0F9&_nc_zt=23&_nc_ht=scontent-sin11-1.xx&oh=03_Q7cD2QGp_bvcwCPRfrvIDgfsaaet9zB19UqVHSjRE9_2unazfA&oe=6863992F" alt="Bảng học phí và các khoản phải nộp - K5" />
@@ -374,7 +382,7 @@
 </section>
 
     <section id="hoatdong">
-  <h2>Hoạt động của trẻ</h2>
+  <h2>Hoạt động nhà trường</h2>
   <p>Chúng tôi tổ chức nhiều hoạt động phong phú nhằm phát triển các kỹ năng và thể chất cho trẻ như:</p>
   <ul>
     <li>Hoạt động Montessori theo phương pháp quốc tế.</li>
@@ -392,58 +400,78 @@
   <div class="lightbox-album" id="album-hoatdong">
     <span class="close-btn" onclick="closeAlbum('album-hoatdong')">&times;</span>
     <div class="album-images">
-      <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/500168558_602957516175889_8202352145551387339_n.jpg" alt="Hoạt động 1">
-      <img src="https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/499454904_600704993067808_8066541698867653393_n.jpg" alt="Hoạt động 2">
+     <div class="album-images">
+      <img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475191179_514130578391917_4318974369694348559_n.jpg?raw=true">
+      <img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475221137_513404371797871_9108949646865838579_n.jpg?raw=true">
+      <img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475237145_513407831797525_6621637721353627677_n.jpg?raw=true">
+<img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475328594_514017851736523_6948893609835673942_n.jpg?raw=true">
+<img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475353131_514003585071283_6070739121263496713_n.jpg?raw=true">
+<img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475439537_514138628391112_2941170205723227894_n.jpg?raw=true">
+<img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475441591_514593188345656_5716193937612101336_n.jpg?raw=true">
+<img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/475831812_515291434942498_9027352921671882972_n.jpg?raw=true">
+<img src="https://github.com/Happymontessori/anha/blob/main/New%20folder%20(2)/477176355_523528124118829_2574832392104250866_n.jpg?raw=true">
       <img src="https://raw.githubusercontent.com/Happymontessori/anh/refs/heads/main/anh/474657612_511024422035866_1876409621798356261_n.jpg" alt="Hoạt động 3">
       <img src="https://github.com/Happymontessori/anh/blob/main/anh/475653457_514018158403159_1550960083578564241_n.jpg?raw=true" alt="Hoạt động 4">
     </div>
   </div>
 
   <p><em>...và rất nhiều hoạt động thú vị khác đang chờ các bé khám phá!</em></p>
- <section id="hoatdong">
-  <h2>Góc học tập</h2>
+</section>
+ <section id="hoctap">
+  <h2>Học tập</h2>
   <p>Chúng tôi sử dụng pháp pháp Montessori những điểm chính:</p>
   <ul>
     <li>Tự do và tự học.</li>
     <li>Môi trường học tập được chuẩn bị kỹ lưỡng.</li>
     <li>Tôn trọng sự khác biệt cá nhân.</li>
     <li>Nhấn mạnh trải nghiệm thực tế.</li>
-    <li>Phát triển các giác quan,Giáo dục toàn diện.</li>
-    <li>Học tiếng anh với 100% giáo viên nước ngoài.</li>
+    <li>Phát triển các giác quan, giáo dục toàn diện.</li>
+    <li>Học tiếng Anh với 100% giáo viên nước ngoài.</li>
   </ul>
 
-  <!-- Ảnh đại diện (ấn vào sẽ mở album) -->
-  <div class="album-cover" onclick="openAlbum('album-hoatdong')">
-    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" alt="Học tập" 
-    <p class="caption"><em>Ấn vào để xem album hoạt động của trẻ</em></p>
+  <div class="albums-container">
+    <!-- Album học tập 1 -->
+    <div class="album-cover" onclick="openAlbum('album-hoctap1')">
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" alt="Album học tập 1" />
+      <p class="caption"><em>Ấn vào để xem album học tập 1</em></p>
+    </div>
+
+    <!-- Album học tập 2 -->
+    <div class="album-cover" onclick="openAlbum('album-hoctap2')">
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/479733922_524277510710557_5253216959091805140_n.jpg?raw=true" alt="Album học tập 2" />
+      <p class="caption"><em>Ấn vào để xem album học tập 2</em></p>
+    </div>
   </div>
 
-  <!-- Album ẩn, mở khi click -->
-  <div class="lightbox-album" id="album-hoatdong">
-    <span class="close-btn" onclick="closeAlbum('album-hoatdong')">&times;</span>
+  <!-- Nội dung lightbox album 1 -->
+  <div class="lightbox-album" id="album-hoctap1">
+    <span class="close-btn" onclick="closeAlbum('album-hoctap1')">&times;</span>
     <div class="album-images">
-      <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769210872_879112d89588ae441c768911caf7897c.jpg?raw=true" alt="Lớp học Montessori" alt="Lớp học sáng tạ" />
-    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769222649_fbb5dabcc825fef900fc4da54f33d58e.jpg?raw=true" alt="Thực hành giáo cụ" />
-    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769210872_879112d89588ae441c768911caf7897c.jpg?raw=true" />
-  </div>
-  </div>
-  <!-- Ảnh đại diện (ấn vào sẽ mở album) -->
-  <div class="album-cover" onclick="openAlbum('album-hoatdong')">
-    <img src="https://github.com/Happymontessori/anh/blob/main/anh/479733922_524277510710557_5253216959091805140_n.jpg?raw=true" alt="Học tập" 
-    <p class="caption"><em>Ấn vào để xem album hoạt động của trẻ</em></p>
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769210872_879112d89588ae441c768911caf7897c.jpg?raw=true" alt="Lớp học Montessori" />
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769222649_fbb5dabcc825fef900fc4da54f33d58e.jpg?raw=true" alt="Thực hành giáo cụ" />
+ <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" alt="Hoạt động nhóm" />
+    </div>
   </div>
 
-  <!-- Album ẩn, mở khi click -->
-  <div class="lightbox-album" id="album-hoatdong">
-    <span class="close-btn" onclick="closeAlbum('album-hoatdong')">&times;</span>
+  <!-- Nội dung lightbox album 2 -->
+  <div class="lightbox-album" id="album-hoctap2">
+    <span class="close-btn" onclick="closeAlbum('album-hoctap2')">&times;</span>
     <div class="album-images">
-      <img src="https://github.com/Happymontessori/anh/blob/main/anh/479733922_524277510710557_5253216959091805140_n.jpg?raw=true" alt="Lớp học sáng tạ" />
-    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" alt="Thực hành giáo cụ" />
-    <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" />
+      <img src="https://github.com/Happymontessori/anh/blob/main/anh/479733922_524277510710557_5253216959091805140_n.jpg?raw=true" alt="Lớp học sáng tạo" />
+ img src="https://github.com/Happymontessori/12/blob/main/1/474909859_513403151797993_406890612788004173_n.jpg?raw=true"alt="Hoạt động"/>
+<img src="https://github.com/Happymontessori/12/blob/main/1/475257354_513404528464522_6340570690951399723_n.jpg?raw=true"alt="Hoạt động"/>
+<img src="https://github.com/Happymontessori/12/blob/main/1/475278749_514023471735961_4173622413976919577_n.jpg?raw=true"alt="Hoạt động"/>
+<img src="https://github.com/Happymontessori/12/blob/main/1/475278749_514023471735961_4173622413976919577_n.jpg?raw=true"alt="Hoạt động"/>
+<img src="https://github.com/Happymontessori/12/blob/main/1/475297443_513404088464566_5372105467836153136_n.jpg?raw=true"alt="Hoạt động"/>
+<img src="https://github.com/Happymontessori/12/blob/main/1/475303169_514023815069260_1762621273160670126_n.jpg?raw=true"alt="Hoạt động"/>
+<img src="https://github.com/Happymontessori/12/blob/main/1/475374639_514023678402607_3164647651950255598_n.jpg?raw=true"alt="Hoạt động"/>    
+ <img src="https://github.com/Happymontessori/anh/blob/main/anh/z6667769228296_90857198189506395e3226c536fe26b3.jpg?raw=true" alt="Trò chơi Montessori" />
+    </div>
   </div>
-  </div>
+
   <p><em>...và rất nhiều phương pháp giáo dục tiên tiến!</em></p>
 </section>
+
 
     <section id="lienhe">
       <h2>Liên hệ</h2>
@@ -467,22 +495,22 @@
     <img src="" alt="Ảnh phóng to" />
   </div>
 
-  <script>
-    // Script cho lightbox ảnh
-    document.querySelectorAll('img').forEach(img => {
-      img.style.cursor = 'pointer';
-      img.addEventListener('click', () => {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = lightbox.querySelector('img');
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
-      });
+<script>
+  // Chỉ chọn ảnh bên trong các album cần phóng to
+  document.querySelectorAll('.album-images img, .gallery img, .hidden-gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
     });
+  });
 
-    document.getElementById('lightbox').addEventListener('click', () => {
-      document.getElementById('lightbox').style.display = 'none';
-    });
-  </script>
+  document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+</script>
+
 <script>
   function openAlbum(id) {
     document.getElementById(id).style.display = 'block';
